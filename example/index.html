@@ -1,0 +1,70 @@
+<!doctype html>
+<html ng-app="example">
+  <head>
+    <meta charset="utf-8">
+    <title>tusimple-tree</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="index.css">
+    <script src="angular.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <pre>
+        demo1
+        级联选中
+
+    </pre>
+
+    <div ng-controller="demoController">
+
+        <input type="button" value="更换数据一" ng-click="changeData()">
+        <input type="button" value="更换数据二" ng-click="changeData1()">
+      
+        <script type="text/ng-template" id="nodes_renderer.html">
+            <div>
+                <input cascade-checkbox type="checkbox" data-ng-model="node.checked"> {{node.title}}
+            </div>
+            <ul ng-model="node.nodes">
+                <li ng-repeat="node in node.nodes" ng-include="'nodes_renderer.html'">
+                </li>
+            </ul>
+        </script>
+
+        <ul ng-model="data">
+            <li ng-repeat="node in data" ng-include="'nodes_renderer.html'"></li>
+        </ul>
+
+    </div>
+
+    <pre>
+        demo2
+        只允许选中叶子节点
+    </pre>
+
+    <div ng-controller="demoController">
+
+        <input type="button" value="更换数据一" ng-click="changeData()">
+        <input type="button" value="更换数据二" ng-click="changeData1()">
+        <script type="text/ng-template" id="nodes_renderer1.html">
+            <div>
+                <input leaf-checkbox type="checkbox" data-ng-model="node.checked"> {{node.title}}
+            </div>
+            <ul ng-model="node.nodes">
+                <li ng-repeat="node in node.nodes" ng-include="'nodes_renderer1.html'">
+                </li>
+            </ul>
+        </script>
+
+        <ul ng-model="data">
+            <li ng-repeat="node in data" ng-include="'nodes_renderer1.html'"></li>
+        </ul>
+
+    </div>
+    <script src="tusimple-tree.directive.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
