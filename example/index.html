@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="index.css">
     <script src="angular.min.js"></script>
+    <script src="tusimple-tree.js"></script>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -24,18 +25,9 @@
         <input type="button" value="更换数据一" ng-click="changeData()">
         <input type="button" value="更换数据二" ng-click="changeData1()">
       
-        <script type="text/ng-template" id="nodes_renderer.html">
-            <div>
-                <input cascade-checkbox type="checkbox" data-ng-model="node.checked"> {{node.title}}
-            </div>
-            <ul ng-model="node.nodes">
-                <li ng-repeat="node in node.nodes" ng-include="'nodes_renderer.html'">
-                </li>
-            </ul>
-        </script>
 
         <ul ng-model="data">
-            <li ng-repeat="node in data" ng-include="'nodes_renderer.html'"></li>
+            <li ng-repeat="node in data" ng-include="'template-html/nodes-renderer.html'"></li>
         </ul>
 
     </div>
@@ -48,23 +40,44 @@
     <div ng-controller="demoController">
 
         <input type="button" value="更换数据一" ng-click="changeData()">
+
         <input type="button" value="更换数据二" ng-click="changeData1()">
-        <script type="text/ng-template" id="nodes_renderer1.html">
-            <div>
-                <input leaf-checkbox type="checkbox" data-ng-model="node.checked"> {{node.title}}
-            </div>
-            <ul ng-model="node.nodes">
-                <li ng-repeat="node in node.nodes" ng-include="'nodes_renderer1.html'">
-                </li>
-            </ul>
-        </script>
 
         <ul ng-model="data">
-            <li ng-repeat="node in data" ng-include="'nodes_renderer1.html'"></li>
+            <li ng-repeat="node in data" ng-include="'template-html/nodes-renderer1.html'"></li>
         </ul>
 
     </div>
-    <script src="tusimple-tree.directive.js"></script>
+
+    <pre>
+        demo3
+        可删除节点
+    </pre>
+
+    <div ng-controller="demoController">
+
+        <input type="button" value="更换数据一" ng-click="changeData()">
+
+        <input type="button" value="更换数据二" ng-click="changeData1()">
+
+        <ul ng-model="data">
+            <li ng-repeat="node in data" ng-include="'template-html/nodes-renderer2.html'"></li>
+        </ul>
+
+    </div>
+
+    <div ng-controller="demoController">
+
+        <input type="button" value="更换数据一" ng-click="changeData()">
+
+        <input type="button" value="更换数据二" ng-click="changeData1()">
+
+        <ul ng-model="data">
+            <li ng-repeat="node in data" ng-include="'template-html/add-nodes.html'"></li>
+        </ul>
+
+    </div>
+    
     <script src="index.js"></script>
   </body>
 </html>

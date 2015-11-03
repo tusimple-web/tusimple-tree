@@ -1,3 +1,29 @@
 ul, li {
     list-style: none;
 }
+.box-container{
+    display: inline-block;
+    position: relative;
+    border-left: 3px solid #6689a8;
+    min-width: 130px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 20px;
+    line-height: 40px;
+    background-color: #e3eaeb;
+    margin: 10px;
+    .close{
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        line-height: 10px;
+    }
+    .add{
+        cursor: pointer;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        line-height: 10px;
+    }
+}

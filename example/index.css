@@ -1,4 +1,28 @@
 ul, li {
   list-style: none; }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxpQkFBaUIsRUFDcEIiLCJmaWxlIjoiaW5kZXguY3NzIiwic291cmNlc0NvbnRlbnQiOlsidWwsIGxpIHtcbiAgICBsaXN0LXN0eWxlOiBub25lO1xufSJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ== */
+.box-container {
+  display: inline-block;
+  position: relative;
+  border-left: 3px solid #6689a8;
+  min-width: 130px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 20px;
+  line-height: 40px;
+  background-color: #e3eaeb;
+  margin: 10px; }
+  .box-container .close {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    line-height: 10px; }
+  .box-container .add {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    line-height: 10px; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxpQkFBaUIsRUFDcEI7O0FBQ0Q7RUFDSSxzQkFBc0I7RUFDdEIsbUJBQW1CO0VBQ25CLCtCQUErQjtFQUMvQixpQkFBaUI7RUFDakIsYUFBYTtFQUNiLG1CQUFtQjtFQUNuQixvQkFBb0I7RUFDcEIsa0JBQWtCO0VBQ2xCLDBCQUEwQjtFQUMxQixhQUFhLEVBZWhCO0VBekJEO0lBWVEsZ0JBQWdCO0lBQ2hCLG1CQUFtQjtJQUNuQixXQUFXO0lBQ1gsU0FBUztJQUNULGtCQUFrQixFQUNyQjtFQWpCTDtJQW1CUSxnQkFBZ0I7SUFDaEIsbUJBQW1CO0lBQ25CLFdBQVc7SUFDWCxZQUFZO0lBQ1osa0JBQWtCLEVBQ3JCIiwiZmlsZSI6ImluZGV4LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInVsLCBsaSB7XG4gICAgbGlzdC1zdHlsZTogbm9uZTtcbn1cbi5ib3gtY29udGFpbmVye1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgYm9yZGVyLWxlZnQ6IDNweCBzb2xpZCAjNjY4OWE4O1xuICAgIG1pbi13aWR0aDogMTMwcHg7XG4gICAgaGVpZ2h0OiA0MHB4O1xuICAgIHBhZGRpbmctbGVmdDogMTBweDtcbiAgICBwYWRkaW5nLXJpZ2h0OiAyMHB4O1xuICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNlM2VhZWI7XG4gICAgbWFyZ2luOiAxMHB4O1xuICAgIC5jbG9zZXtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHJpZ2h0OiA1cHg7XG4gICAgICAgIHRvcDogNXB4O1xuICAgICAgICBsaW5lLWhlaWdodDogMTBweDtcbiAgICB9XG4gICAgLmFkZHtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHJpZ2h0OiA1cHg7XG4gICAgICAgIGJvdHRvbTogNXB4O1xuICAgICAgICBsaW5lLWhlaWdodDogMTBweDtcbiAgICB9XG59Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */

@@ -1,0 +1,7 @@
+<div class="box-container">
+    <input cascade-checkbox type="checkbox" data-ng-model="node.checked"> {{node.title}}
+</div>
+<ul ng-model="node.nodes">
+    <li ng-repeat="node in node.nodes" ng-include="'template-html/nodes-renderer.html'">
+    </li>
+</ul>

@@ -3,7 +3,6 @@
 angular
     .module('example',['tusimpleTree'])
     .controller("demoController", function($scope) {
-        $scope.hah = "ja";
         $scope.data = [{
             "id": 1,
             "title": "node1",

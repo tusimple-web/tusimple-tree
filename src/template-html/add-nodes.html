@@ -1,0 +1,8 @@
+<div class="box-container">
+    <input leaf-checkbox type="checkbox" data-ng-model="node.checked"> {{node.title}}
+    <span add-node-checkbox class="add">+</span>
+</div>
+<ul ng-model="node.nodes">
+    <li ng-repeat="node in node.nodes" ng-include="'template-html/add-nodes.html'">
+    </li>
+</ul>

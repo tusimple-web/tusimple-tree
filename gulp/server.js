@@ -46,6 +46,6 @@ browserSync.use(browserSyncSpa({
   selector: '[ng-app]'// Only needed for angular apps
 }));
 
-gulp.task('serve', ['watch'], function () {
+gulp.task('serve', ['watch','templatecache'], function () {
   browserSyncInit([conf.paths.dist, conf.paths.example]);
 });

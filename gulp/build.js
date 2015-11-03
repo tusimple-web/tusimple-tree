@@ -13,12 +13,12 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build', function() {
-    return gulp.src(path.join(conf.paths.dist, '/tusimple-tree.directive.js'))
+    return gulp.src(path.join(conf.paths.dist, '/tusimple-tree.js'))
         .pipe($.ngAnnotate())
         .pipe($.uglify({
             preserveComments: $.uglifySaveLicense
         })).on('error', conf.errorHandler('Uglify'))
         .pipe($.sourcemaps.write('maps'))
-        .pipe($.rename('tusimple-tree.directive.min.js'))
+        .pipe($.rename('tusimple-tree.min.js'))
         .pipe(gulp.dest(path.join(conf.paths.dist,'/')));
 });

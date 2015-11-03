@@ -22,11 +22,15 @@ gulp.task('watch', function () {
   });
 
   gulp.watch(path.join(conf.paths.example, '/**/*.js'), function(event) {
-      gulp.start('scripts');
+      gulp.start('example');
   });
 
-  gulp.watch(path.join(conf.paths.dist, '/tusimple-tree.directive.js'), function(event) {
+  gulp.watch(path.join(conf.paths.dist, '/tusimple-tree.js'), function(event) {
       gulp.start('refresh');
+  });
+
+  gulp.watch(path.join(conf.paths.src, '/**/*.html'), function(event) {
+      gulp.start('templatecache');
   });
 
   gulp.watch(path.join(conf.paths.src, '/**/*.js'), function(event) {

@@ -9,9 +9,13 @@ tusimple.directive('leafCheckbox', function () {
     }
 
     return function (scope, element, attrs) {
-        if (!isLeaf(scope.node)) {
-            element.css("display", "none");
-        }
+        scope.$watch('node',function () {
+            if (!isLeaf(scope.node)) {
+                element.css('display','none');
+            }else{
+                element.css('display','inline-block');
+            }
+        },true);
     };
 });
 
